@@ -34,14 +34,12 @@ export class MaskDirective {
         for (i = 0, x = 1; x && i < mask.length; i++) {
             c = data.charAt(i);
             m = mask.charAt(i);
-            console.log(c);
+
             switch (mask.charAt(i)) {
                 case '#':
                     if (/\d/.test(c)) {
-                        console.log('oi');
                         text += c;
                     } else {
-                        console.log('else');
                         x = 0;
                     }
                     break;
